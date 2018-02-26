@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'javac -d . src/*.java'
                 sh 'echo Main-Class: Rectangulator > MAINIFEST.MF'
-                SH 'jar -cvmf MANIFEST.MF rectangle.jar *.class'
+                sh 'jar -cvmf MANIFEST.MF rectangle.jar *.class'
             }
         }
     }
