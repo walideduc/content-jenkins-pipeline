@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Say Hello'){
+            steps {
+                sayHello 'Awesome man!'
+            }
+        }
         stage('build'){
             steps {
                 sh 'javac -d . src/*.java'
